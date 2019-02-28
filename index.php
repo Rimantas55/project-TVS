@@ -14,7 +14,9 @@
 </head>
 <body>
 	<?php echo "Sveikas Jonai";?>
-
+	<div class="alert alert-success" role="alert">
+  <?php echo "Sveikas Jonai";?>
+</div>
 
 
 
