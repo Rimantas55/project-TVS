@@ -12,17 +12,8 @@ if(isset($_POST["submit"])){
 	}*/	
 }
 
-//Creating connection to MySql
-$connection = mysqli_connect('localhost', 'root', '', 'loginapp');
-
-//Checking if connection is working
-if($connection) {
-
-	echo " connection to database is successful" . "<br>";
-} else {
-
-	die('Database connection failed');
-}
+//prijungem mysqli connection is kito file t.y db.php
+include "db.php";
 
 //inserting info from html form to Mysql database 
 $query = "INSERT INTO users(username, password) ";
