@@ -1,15 +1,9 @@
 <?php
 if(isset($_POST["submit"])){
 
-	//$names = ["rimas", "jonas", "tomas"];
 	$username = $_POST["username"];
 	$password = $_POST['password'];
 
-	/*if (in_array($username, $names)) {
-		echo "Welcome" . " ". $_POST["username"] . " " . $_POST["password"];
-	} else {
-		echo "you can not log in";
-	}*/	
 }
 
 //prijungem mysqli connection is kito file t.y db.php
@@ -29,7 +23,6 @@ $result = mysqli_query($connection, $query);
 if(!$result) {
 
 	die('Query FAILED' . mysqli_error($connection));
-
 }
 
 //method how to check what kind info have database / output info from database

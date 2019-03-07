@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <html lang="en">
@@ -13,7 +12,6 @@
 	<title>TVS</title>
 </head>
 <body>
-	<?php echo "Sveikas Jonai";?>
 	<div class="alert alert-success" role="alert">
 		<?php echo "Sveikas Jonai";?>
 	</div>
@@ -28,21 +26,40 @@
 			<span aria-hidden="true">&times;</span>
 		</button>
 	</div>
-	<div class="contain">
-		<div class="col-lg-2">
-			<form action="process.php" method="post">
-				<div class="form-group mx-sm-3 mb-2">
-					<label for="username">Username</label>
-		<input type="text" placeholder="Enter your name" name="username" autofocus="" class="form-control" >
-		<label for="password">Password</label>
-		<input type="password" placeholder="Enter your password" name="password" class="form-control">
-		<input class="btn btn-primary" type="submit"  name="submit">
-		</div>
-	</form>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-4">
+				<form action="process.php" method="post">
+					<div class="form-group mx-sm-3 mb-2">
+						<label for="username">Username</label>
+						<input type="text" placeholder="Enter your name" name="username" autofocus="" class="form-control" >
+						<label for="password">Password</label>
+						<input type="password" placeholder="Enter your password" name="password" class="form-control">
+						<input class="btn btn-primary" type="submit"  name="submit">
+					</div>
+				</form>
+			</div>
+			<div class="col-4">
+				<h3>Update db</h3>
+				<!-- <form action="process.php" method="post">
+					<div class="form-group mx-sm-3 mb-2">
+						<label for="username">Username</label>
+						<input type="text" placeholder="Enter your name" name="username" autofocus="" class="form-control" >
+						<label for="password">Password</label>
+						<input type="password" placeholder="Enter your password" name="password" class="form-control">
+						<input class="btn btn-primary" type="submit"  name="submit">
+					</div>
+				</form> -->
+			</div>
+			<div class="col-4">
+				
+				
+				
+			</div>
 		</div>
 	</div>
 	
-	
+
 
 
 
