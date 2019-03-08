@@ -1,7 +1,7 @@
 <?php
 
 //prijungem mysqli connection is kito file t.y db.php
-require_once "db.php";
+require_once("db.php"); 
 
 if(isset($_POST["submit"])){
 
