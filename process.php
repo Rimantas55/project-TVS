@@ -1,15 +1,14 @@
 <?php
+
+//prijungem mysqli connection is kito file t.y db.php
+include "db.php";
+
 if(isset($_POST["submit"])){
 
 	$username = $_POST["username"];
 	$password = $_POST['password'];
 
 }
-
-
-//prijungem mysqli connection is kito file t.y db.php
-include "db.php";
-
 
 //inserting info from html form to Mysql database 
 $query = "INSERT INTO users(username, password) ";
