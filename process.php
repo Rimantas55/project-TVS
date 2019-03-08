@@ -16,6 +16,15 @@ $query = "INSERT INTO users(username, password) ";
 $query .= "VALUES ('$username', '$password')";
 
 
+//Checking if info insertings working good
+$result = mysqli_query($connection, $query);
+
+if(!$result) {
+
+	die('Query FAILED' . mysqli_error($connection));
+}
+
+
 // * zvaigzdute reiskia ALL
 // query for reading information from database and output can be done with while loop
 $query = "SELECT * FROM users";
