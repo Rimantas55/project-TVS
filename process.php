@@ -8,12 +8,15 @@ if(isset($_POST["submit"])) {
 	$username = $_POST["username"];
 	$password = $_POST['password'];
 
+//kazkokia security dalis kuri leidzia kad i db butu irasyta info su apostrofa --> ' 
+	$username = mysqli_real_escape_string($connection,$username);
+	$password = mysqli_real_escape_string($connection,$password);
+
 }
 
 //inserting info from html form to Mysql database 
 $query = "INSERT INTO users(username, password) ";
 $query .= "VALUES ('$username', '$password')";
-
 
 //Checking if info insertings working good
 $result = mysqli_query($connection, $query);
