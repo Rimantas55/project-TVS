@@ -14,6 +14,12 @@ if(isset($_POST["submit"])) {
 
 }
 
+//incrypting passwords
+$hashFormat = "$2y$10$";
+$salt = "iusesomecrazystrings22";
+$hashF_and_salt = $hashFormat . $salt;
+$password = crypt($password, $hashF_and_salt);
+
 //inserting info from html form to Mysql database 
 $query = "INSERT INTO users(username, password) ";
 $query .= "VALUES ('$username', '$password')";
