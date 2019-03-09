@@ -12,6 +12,9 @@
 	<title>TVS</title>
 </head>
 <body>
+	<a href="login_update.php" target="_blank">Linkas i login_update.php</a>
+	<br>
+	<a href="process.php" target="_blank">Linkas i process.php</a>
 	<div class="alert alert-success" role="alert">
 		<?php echo "Sveikas Jonai";?>
 	</div>

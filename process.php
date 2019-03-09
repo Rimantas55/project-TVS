@@ -3,7 +3,7 @@
 //prijungem mysqli connection is kito file t.y db.php
 require_once("db.php"); 
 
-if(isset($_POST["submit"])){
+if(isset($_POST["submit"])) {
 
 	$username = $_POST["username"];
 	$password = $_POST['password'];
@@ -45,7 +45,6 @@ while($row = mysqli_fetch_assoc($result)) {
 
 }
 
-
-
-
 ?>
+
+
