@@ -1,3 +1,10 @@
+<?php 
+//prijungem mysqli connection is kito file t.y db.php
+require_once("db.php");
+// sitas leidzia praskanuoti kas yra duomenu bazeje ir istraukti info -> $result = mysqli_query($connection, $query);
+require_once("core/functions.php");
+
+?>
 <!DOCTYPE html>
 <html>
 <html lang="en">
@@ -26,7 +33,20 @@
 						<input type="password" placeholder="Enter your password" name="password" class="form-control">
 						<label for="password">Select</label>
 						<select name="id" id="" class="form-control">
-							<option value="">1</option>
+
+							<?php
+
+							while($row = mysqli_fetch_assoc($result)) {
+								$id = $row['id'];
+
+
+								echo "<option value='$id'>$id</option>";
+
+							}
+
+							?>
+
+							
 							<input class="btn btn-primary" type="submit"  name="submit" value="UPDATE">
 						</div>
 					</form>
