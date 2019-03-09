@@ -1,8 +1,33 @@
 <?php 
 //prijungem mysqli connection is kito file t.y db.php
 require_once("db.php");
+?>
+
+<?php
 // sitas leidzia praskanuoti kas yra duomenu bazeje ir istraukti info -> $result = mysqli_query($connection, $query);
 require_once("core/functions.php");
+?>
+<?php
+if(isset($_POST['submit'])){
+
+$username = $_POST['username'];
+$password = $_POST['password'];
+$id = $_POST['id'];
+
+//query komanda kuri UPDATINS info db
+$query = "UPDATE users SET ";
+$query .= "username = '$username', ";
+$query .= "password = '$password' ";
+$query .= "WHERE id = $id ";
+
+$result = mysqli_query($connection, $query);
+
+	if(!$result) {
+
+		die("QUERY FAILED" . mysqli_error($connection));
+	}
+
+}
 
 ?>
 <!DOCTYPE html>
@@ -24,8 +49,8 @@ require_once("core/functions.php");
 	<a href="process.php" target="_blank">Linkas i process.php</a>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-sm-6">
-				<form action="process.php" method="post">
+			<div class="col-md-4">
+				<form action="login_update.php" method="post">
 					<div class="form-group mx-sm-3 mb-2">
 						<label for="username">Username</label>
 						<input type="text" placeholder="Enter your name" name="username" autofocus="" class="form-control" >
