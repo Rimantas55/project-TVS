@@ -25,16 +25,16 @@
 						<label for="password">Password</label>
 						<input type="password" placeholder="Enter your password" name="password" class="form-control">
 						<label for="password">Select</label>
-						<select name="" id="" class="form-control">
+						<select name="id" id="" class="form-control">
 							<option value="">1</option>
 							<input class="btn btn-primary" type="submit"  name="submit" value="UPDATE">
 						</div>
 					</form>
 				</div>
-				
+
 			</div>
 		</div>
-		
+
 
 
 
