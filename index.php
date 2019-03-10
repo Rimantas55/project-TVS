@@ -22,6 +22,18 @@ setcookie($name, $value, $expiration);
 	<title>TVS</title>
 </head>
 <body>
+	<?php
+	if(isset($_COOKIE["SomeCookieName"])) {
+
+		$cookieName = $_COOKIE["SomeCookieName"];
+
+		echo $cookieName;
+		
+	} else {
+
+		$cookieName = "";
+	}
+	?>
 	<a href="login_update.php" target="_blank">Linkas i login_update.php</a>
 	<br>
 	<a href="process.php" target="_blank">Linkas i process.php</a>
