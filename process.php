@@ -1,4 +1,12 @@
 <?php
+//session from the index.php file
+session_start();
+
+echo $_SESSION['message'] . "<br>";
+
+?>
+
+<?php
 
 //prijungem mysqli connection is kito file t.y db.php
 require_once("db.php"); 

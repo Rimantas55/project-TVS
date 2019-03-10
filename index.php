@@ -6,6 +6,15 @@ $value = 100;
 $expiration = time() + (60*60*24*7);
 
 setcookie($name, $value, $expiration);
+?>
+
+<?php
+
+//seeting sessions / sessions settings goes via 2 and more files
+session_start();
+
+$_SESSION['message'] = "This session was been planted in index.php";
+
 
 ?>
 <!DOCTYPE html>
@@ -28,7 +37,7 @@ setcookie($name, $value, $expiration);
 		$cookieName = $_COOKIE["SomeCookieName"];
 
 		echo $cookieName;
-		
+
 	} else {
 
 		$cookieName = "";
