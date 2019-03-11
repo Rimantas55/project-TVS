@@ -147,14 +147,14 @@ if($handle = fopen($file, 'w')) {
 //read file
 if($handle = fopen($file, 'r')) {
 
-	Echo $content = fread($handle, 100); //Each bite equals a character include spaces
+	Echo $content = fread($handle, 100); //Each bite equals a character include spaces / vietoje 100 galima irasyti filesize($file);
 
 	fclose($handle);	
 
 }
 
-
-
+//delete files not only txt but and php.
+unlink('filename');
 
 
 
