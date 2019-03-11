@@ -104,7 +104,7 @@ $_SESSION['message'] = "This session was been planted in index.php";
 		}
 	}
 
-$ford = new Car();
+	$ford = new Car();
 echo $ford->wheels . "<br>"; //output 4
 $ford->wheels = 8; //change parameter outside the class to 8
 echo $ford->wheels; //ouput 8
@@ -118,26 +118,50 @@ class Plane extends Car {
 $jet = new Plane();
 echo $jet->wheels;
 
-	?>
+?>
 
 <pre>class Name {};
-var name = value;
-function name() {}
-this->name; 
-class Name2 extends Name {}
-__construct
+	var name = value;
+	function name() {}
+	this->name; 
+	class Name2 extends Name {}
+	__construct
 parameters and metchods can be public, protected, private, static</pre>
 
+<?php
+//working with files
+
+$file = "example.txt";
+
+if($handle = fopen($file, 'w')) {
+
+	fwrite($handle, "File has been updated");
+
+	fclose($handle);	
+
+} else {
+
+	echo "The app was not able to write to the file";
+
+}
 
 
 
 
 
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="jquery/jquery-3.3.1.slim.min.js"></script>
-	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+
+?>
+
+
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="jquery/jquery-3.3.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
 
