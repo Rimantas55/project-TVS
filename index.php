@@ -144,6 +144,14 @@ if($handle = fopen($file, 'w')) {
 	echo "The app was not able to write to the file";
 
 }
+//read file
+if($handle = fopen($file, 'r')) {
+
+	Echo $content = fread($handle, 100); //Each bite equals a character include spaces
+
+	fclose($handle);	
+
+}
 
 
 
