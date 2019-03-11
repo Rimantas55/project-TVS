@@ -92,8 +92,41 @@ $_SESSION['message'] = "This session was been planted in index.php";
 			</div>
 		</div>
 	</div>
-	
+	<?php
+	class Car {
 
+		var $wheels = 4;
+		
+		function moveWheels() {
+
+			//echo "Move wheels";
+			$this->wheels = 10;
+		}
+	}
+
+$ford = new Car();
+echo $ford->wheels . "<br>"; //output 4
+$ford->wheels = 8; //change parameter outside the class to 8
+echo $ford->wheels; //ouput 8
+$ford->moveWheels(); //why there is no output 10?
+
+class Plane extends Car {
+
+	var $wheels = 15;//overwrites parents parameters, and parants parameter can not overwrite childs?
+}
+
+$jet = new Plane();
+echo $jet->wheels;
+
+	?>
+
+<pre>class Name {};
+var name = value;
+function name() {}
+this->name; 
+class Name2 extends Name {}
+__construct
+parameters and metchods can be public, protected, private, static</pre>
 
 
 
