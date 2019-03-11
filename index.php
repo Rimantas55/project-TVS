@@ -156,8 +156,6 @@ if($handle = fopen($file, 'r')) {
 //delete files not only txt but and php.
 unlink('filename');
 
-
-
 ?>
 
 
